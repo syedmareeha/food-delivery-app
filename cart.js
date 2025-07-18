@@ -59,3 +59,15 @@ document.getElementById("checkout-form").addEventListener("submit", function (e)
   window.location.href = "order-summary.html";
 });
 window.onload = loadCart;
+window.onload = function () {
+  const cartContainer = document.getElementById("cart-items");
+  const totalEl = document.getElementById("cart-total");
+  const form = document.getElementById("checkout-form");
+
+  if (!cartContainer || !totalEl || !form) {
+    console.error("Required elements missing in cart.html");
+    return;
+  }
+
+  loadCart();
+};
