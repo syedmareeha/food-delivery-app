@@ -1,0 +1,135 @@
+/* Reset default browser styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+/* Navbar */
+.navbar {
+  background-color: #ff5e5e;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.navbar .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.navbar .nav-links li a:hover {
+  text-decoration: underline;
+}
+/* Hero Section */
+.hero {
+  background-color: #ffe0e0;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  color: #cc0000;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+/* Food Categories Section */
+.category-section {
+  padding: 2rem;
+}
+.category-section h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #cc0000;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+}
+/* Food Grid */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+/* Food Card */
+.food-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.food-card:hover {
+  transform: scale(1.03);
+}
+.food-card img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+.food-card h3 {
+  margin: 0.8rem 0 0.3rem;
+  font-size: 1.2rem;
+}
+.food-card p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+.food-card button {
+  background-color: #ff5e5e;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+.food-card button:hover {
+  background-color: #cc0000;
+}
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ff5e5e;
+  color: white;
+  margin-top: 3rem;
+}
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
